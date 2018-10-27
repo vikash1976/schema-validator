@@ -1,0 +1,38 @@
+{
+	"version": "3.0.5.1.0",
+	"name": "default deployment Name",
+	"referenceDeployment": {
+	},
+	"deploymentProperties": [
+		{
+			"propertyKey": "SHARED_MEMORY_TABLES_STATUS",
+			"description": "SHARED_MEMORY_TABLES_STATUS",
+			"alias": "serverConfigStatus",
+			"category": "GENERAL",
+			"value": "FALSE",
+			"required": 1,
+			"overWriteValue": "Y",
+			"deprecated": true,
+			"defaultValue": "a default value if value is mising",
+			"sequence": 4,
+			"active": true,
+			"manualEntry": false,
+			"status": 5
+		},
+		{
+			"propertyKey": "SHARED_MEMORY_TABLES_STATUS",
+			"description": "SHARED_MEMORY_TABLES_STATUS",
+			"alias": "serverConfigStatus",
+			"category": "MESSAGING",
+			"value": null,
+			"required": 2,
+			"overWriteValue": "Y",
+			"deprecated": true,
+			"defaultValue": "a default value if value is mising",
+			"sequence": 8,
+			"active": true,
+			"manualEntry": false,
+			"status": 6
+		}
+	]
+}

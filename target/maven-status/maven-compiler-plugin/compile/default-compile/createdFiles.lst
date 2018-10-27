@@ -1,0 +1,14 @@
+com\fis\cas\aligne\json_validator\models\DeploymentProperty$Required.class
+com\vik\json_validator\jsonjava\JSONArrayDemo.class
+com\vik\json_validator\jsonpointer\JsonPointerCrud.class
+com\vik\json_validator\jsonjava\JSONObjectDemo.class
+com\fis\cas\aligne\json_validator\models\DeploymentProperty.class
+com\fis\cas\aligne\json_validator\models\ReferenceDeployment.class
+com\vik\json_validator\jsonjava\JSONTokenerDemo.class
+com\vik\json_validator\jsonjava\CookieDemo.class
+com\vik\json_validator\jsonjava\HTTPDemo.class
+com\vik\json_validator\jsonjava\DemoBean.class
+com\fis\cas\aligne\json_validator\models\EnvConfigSchema.class
+com\vik\json_validator\jsonjava\ObjectToFromJSON.class
+com\fis\cas\aligne\json_validator\models\DeploymentProperty$Category.class
+com\vik\json_validator\jsonjava\CDLDemo.class

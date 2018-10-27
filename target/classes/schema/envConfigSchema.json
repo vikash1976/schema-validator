@@ -1,0 +1,129 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://json-schema.org/draft-07/schema#",
+	"title": "Product",
+	"description": "A product from the catalog",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"version": {
+			"type": "string"
+		},
+		"referenceDeployment": {
+			"type": "object"
+		},
+		"deploymentProperties": {
+			"$ref": "#/definitions/configProperties"
+		},
+		"envProperties": {
+			"$ref": "#/definitions/configProperties"
+		}
+	},
+    "allOf": [
+        {
+            "required": [
+                "name"
+            ]
+        },
+        {
+            "required": [
+                "version"
+            ]
+        },
+        {
+            "anyOf": [
+                {
+                    "required": [
+                        "deploymentProperties"
+                    ]
+                },
+                {
+                    "required": [
+                        "envProperties"
+                    ]
+                }
+            ]
+        }
+    ],
+	"definitions": {
+		"configProperties": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"propertyKey": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"alias": {
+						"type": "string"
+					},
+					"category": {
+						"type": [
+							"string",
+							"null"
+						],
+						"enum": [
+							"DATABASE",
+							"MESSAGING",
+							"JCR",
+							"WEBSSO",
+							"PASSWORD",
+							"JVM_PARAM",
+							"GENERAL",
+							null
+						]
+					},
+					"value": {
+						"type": [
+							"string",
+							"null"
+						]
+					},
+					"required": {
+						"type": "number",
+						"enum": [
+							0,
+							1
+						]
+					},
+					"overWriteValue": {
+						"type": "string",
+						"maxLength": 1
+					},
+					"deprecated": {
+						"type": "boolean"
+					},
+					"defaultValue": {
+						"type": [
+							"string",
+							"null"
+						]
+					},
+					"sequence": {
+						"type": "number"
+					},
+					"active": {
+						"type": "boolean"
+					},
+					"manualEntry": {
+						"type": "boolean"
+					},
+					"status": {
+						"type": "number"
+					}
+				},
+				"required": [
+					"propertyKey",
+					"description",
+					"category",
+					"value"
+				]
+			}
+		}
+	}
+}

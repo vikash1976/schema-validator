@@ -1,0 +1,70 @@
+{
+	"name": "TRM-PUBLISHER",
+	"version": "3.0.5.1.0",
+	"envProperties": [
+		{
+			"propertyKey": "PUBLISHER_CON_TYPE",
+			"value": "Publisher",
+			"required": 0,
+			"description": "Publisher connection type",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHER_CON_CRITICAL",
+			"value": "true",
+			"required": 0,
+			"description": "Publisher connection critical",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHER_CON_IPADDRESS",
+			"value": "publisherhost",
+			"required": 0,
+			"description": "Publisher connection ipaddress",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHER_CON_PORT",
+			"value": "8082",
+			"required": 0,
+			"description": "Publisher connection port",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "ORB_NAME_SERVER_ORBGIOPMAXMSGSIZE",
+			"value": "5",
+			"required": 0,
+			"description": "Omni server",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHED_TABLES_PPOW",
+			"value": "ppow_refresh",
+			"required": 0,
+			"description": "Publisher table ppow",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHED_TABLES_PRCPOW",
+			"value": "prcpow_refresh",
+			"required": 0,
+			"description": "Publisher table prcpow",
+			"defaultValue": null,
+			"category": null
+		},
+		{
+			"propertyKey": "PUBLISHER_INFO_BINARY",
+			"value": "C:/Projects/ZS Manager/zpublish.exe",
+			"required": 0,
+			"description": "Publisher info binary path",
+			"defaultValue": null,
+			"category": null
+		}
+	]
+}

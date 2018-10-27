@@ -1,0 +1,755 @@
+-----------------------------------com.example.DeploymentProperty.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"propertyKey",
+"description",
+"alias",
+"category",
+"value",
+"required",
+"overWriteValue",
+"deprecated",
+"defaultValue",
+"sequence",
+"active",
+"manualEntry",
+"status"
+})
+public class DeploymentProperty {
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+private String propertyKey;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+private String description;
+@JsonProperty("alias")
+private String alias;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+private DeploymentProperty.Category category;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+private String value;
+@JsonProperty("required")
+private DeploymentProperty.Required required;
+@JsonProperty("overWriteValue")
+private String overWriteValue;
+@JsonProperty("deprecated")
+private Boolean deprecated;
+@JsonProperty("defaultValue")
+private String defaultValue;
+@JsonProperty("sequence")
+private Double sequence;
+@JsonProperty("active")
+private Boolean active;
+@JsonProperty("manualEntry")
+private Boolean manualEntry;
+@JsonProperty("status")
+private Double status;
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+public String getPropertyKey() {
+return propertyKey;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+public void setPropertyKey(String propertyKey) {
+this.propertyKey = propertyKey;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+public String getDescription() {
+return description;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+public void setDescription(String description) {
+this.description = description;
+}
+
+@JsonProperty("alias")
+public String getAlias() {
+return alias;
+}
+
+@JsonProperty("alias")
+public void setAlias(String alias) {
+this.alias = alias;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+public DeploymentProperty.Category getCategory() {
+return category;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+public void setCategory(DeploymentProperty.Category category) {
+this.category = category;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+public String getValue() {
+return value;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+public void setValue(String value) {
+this.value = value;
+}
+
+@JsonProperty("required")
+public DeploymentProperty.Required getRequired() {
+return required;
+}
+
+@JsonProperty("required")
+public void setRequired(DeploymentProperty.Required required) {
+this.required = required;
+}
+
+@JsonProperty("overWriteValue")
+public String getOverWriteValue() {
+return overWriteValue;
+}
+
+@JsonProperty("overWriteValue")
+public void setOverWriteValue(String overWriteValue) {
+this.overWriteValue = overWriteValue;
+}
+
+@JsonProperty("deprecated")
+public Boolean getDeprecated() {
+return deprecated;
+}
+
+@JsonProperty("deprecated")
+public void setDeprecated(Boolean deprecated) {
+this.deprecated = deprecated;
+}
+
+@JsonProperty("defaultValue")
+public String getDefaultValue() {
+return defaultValue;
+}
+
+@JsonProperty("defaultValue")
+public void setDefaultValue(String defaultValue) {
+this.defaultValue = defaultValue;
+}
+
+@JsonProperty("sequence")
+public Double getSequence() {
+return sequence;
+}
+
+@JsonProperty("sequence")
+public void setSequence(Double sequence) {
+this.sequence = sequence;
+}
+
+@JsonProperty("active")
+public Boolean getActive() {
+return active;
+}
+
+@JsonProperty("active")
+public void setActive(Boolean active) {
+this.active = active;
+}
+
+@JsonProperty("manualEntry")
+public Boolean getManualEntry() {
+return manualEntry;
+}
+
+@JsonProperty("manualEntry")
+public void setManualEntry(Boolean manualEntry) {
+this.manualEntry = manualEntry;
+}
+
+@JsonProperty("status")
+public Double getStatus() {
+return status;
+}
+
+@JsonProperty("status")
+public void setStatus(Double status) {
+this.status = status;
+}
+
+public enum Category {
+
+DATABASE("DATABASE"),
+MESSAGING("MESSAGING"),
+JCR("JCR"),
+WEBSSO("WEBSSO"),
+PASSWORD("PASSWORD"),
+JVM_PARAM("JVM_PARAM"),
+GENERAL("GENERAL");
+private final String value;
+private final static Map<String, DeploymentProperty.Category> CONSTANTS = new HashMap<String, DeploymentProperty.Category>();
+
+static {
+for (DeploymentProperty.Category c: values()) {
+CONSTANTS.put(c.value, c);
+}
+}
+
+private Category(String value) {
+this.value = value;
+}
+
+@Override
+public String toString() {
+return this.value;
+}
+
+@JsonValue
+public String value() {
+return this.value;
+}
+
+@JsonCreator
+public static DeploymentProperty.Category fromValue(String value) {
+DeploymentProperty.Category constant = CONSTANTS.get(value);
+if (constant == null) {
+throw new IllegalArgumentException(value);
+} else {
+return constant;
+}
+}
+
+}
+
+public enum Required {
+
+_0(0.0D),
+_1(1.0D);
+private final Double value;
+private final static Map<Double, DeploymentProperty.Required> CONSTANTS = new HashMap<Double, DeploymentProperty.Required>();
+
+static {
+for (DeploymentProperty.Required c: values()) {
+CONSTANTS.put(c.value, c);
+}
+}
+
+private Required(Double value) {
+this.value = value;
+}
+
+@JsonValue
+public Double value() {
+return this.value;
+}
+
+@JsonCreator
+public static DeploymentProperty.Required fromValue(Double value) {
+DeploymentProperty.Required constant = CONSTANTS.get(value);
+if (constant == null) {
+throw new IllegalArgumentException((value +""));
+} else {
+return constant;
+}
+}
+
+}
+
+}
+-----------------------------------com.example.EnvProperty.java-----------------------------------
+
+package com.example;
+
+import java.util.HashMap;
+import java.util.Map;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonValue;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"propertyKey",
+"description",
+"alias",
+"category",
+"value",
+"required",
+"overWriteValue",
+"deprecated",
+"defaultValue",
+"sequence",
+"active",
+"manualEntry",
+"status"
+})
+public class EnvProperty {
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+private String propertyKey;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+private String description;
+@JsonProperty("alias")
+private String alias;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+private EnvProperty.Category category;
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+private String value;
+@JsonProperty("required")
+private EnvProperty.Required required;
+@JsonProperty("overWriteValue")
+private String overWriteValue;
+@JsonProperty("deprecated")
+private Boolean deprecated;
+@JsonProperty("defaultValue")
+private String defaultValue;
+@JsonProperty("sequence")
+private Double sequence;
+@JsonProperty("active")
+private Boolean active;
+@JsonProperty("manualEntry")
+private Boolean manualEntry;
+@JsonProperty("status")
+private Double status;
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+public String getPropertyKey() {
+return propertyKey;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("propertyKey")
+public void setPropertyKey(String propertyKey) {
+this.propertyKey = propertyKey;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+public String getDescription() {
+return description;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("description")
+public void setDescription(String description) {
+this.description = description;
+}
+
+@JsonProperty("alias")
+public String getAlias() {
+return alias;
+}
+
+@JsonProperty("alias")
+public void setAlias(String alias) {
+this.alias = alias;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+public EnvProperty.Category getCategory() {
+return category;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("category")
+public void setCategory(EnvProperty.Category category) {
+this.category = category;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+public String getValue() {
+return value;
+}
+
+/**
+* 
+* (Required)
+* 
+*/
+@JsonProperty("value")
+public void setValue(String value) {
+this.value = value;
+}
+
+@JsonProperty("required")
+public EnvProperty.Required getRequired() {
+return required;
+}
+
+@JsonProperty("required")
+public void setRequired(EnvProperty.Required required) {
+this.required = required;
+}
+
+@JsonProperty("overWriteValue")
+public String getOverWriteValue() {
+return overWriteValue;
+}
+
+@JsonProperty("overWriteValue")
+public void setOverWriteValue(String overWriteValue) {
+this.overWriteValue = overWriteValue;
+}
+
+@JsonProperty("deprecated")
+public Boolean getDeprecated() {
+return deprecated;
+}
+
+@JsonProperty("deprecated")
+public void setDeprecated(Boolean deprecated) {
+this.deprecated = deprecated;
+}
+
+@JsonProperty("defaultValue")
+public String getDefaultValue() {
+return defaultValue;
+}
+
+@JsonProperty("defaultValue")
+public void setDefaultValue(String defaultValue) {
+this.defaultValue = defaultValue;
+}
+
+@JsonProperty("sequence")
+public Double getSequence() {
+return sequence;
+}
+
+@JsonProperty("sequence")
+public void setSequence(Double sequence) {
+this.sequence = sequence;
+}
+
+@JsonProperty("active")
+public Boolean getActive() {
+return active;
+}
+
+@JsonProperty("active")
+public void setActive(Boolean active) {
+this.active = active;
+}
+
+@JsonProperty("manualEntry")
+public Boolean getManualEntry() {
+return manualEntry;
+}
+
+@JsonProperty("manualEntry")
+public void setManualEntry(Boolean manualEntry) {
+this.manualEntry = manualEntry;
+}
+
+@JsonProperty("status")
+public Double getStatus() {
+return status;
+}
+
+@JsonProperty("status")
+public void setStatus(Double status) {
+this.status = status;
+}
+
+public enum Category {
+
+DATABASE("DATABASE"),
+MESSAGING("MESSAGING"),
+JCR("JCR"),
+WEBSSO("WEBSSO"),
+PASSWORD("PASSWORD"),
+JVM_PARAM("JVM_PARAM"),
+GENERAL("GENERAL");
+private final String value;
+private final static Map<String, EnvProperty.Category> CONSTANTS = new HashMap<String, EnvProperty.Category>();
+
+static {
+for (EnvProperty.Category c: values()) {
+CONSTANTS.put(c.value, c);
+}
+}
+
+private Category(String value) {
+this.value = value;
+}
+
+@Override
+public String toString() {
+return this.value;
+}
+
+@JsonValue
+public String value() {
+return this.value;
+}
+
+@JsonCreator
+public static EnvProperty.Category fromValue(String value) {
+EnvProperty.Category constant = CONSTANTS.get(value);
+if (constant == null) {
+throw new IllegalArgumentException(value);
+} else {
+return constant;
+}
+}
+
+}
+
+public enum Required {
+
+_0(0.0D),
+_1(1.0D);
+private final Double value;
+private final static Map<Double, EnvProperty.Required> CONSTANTS = new HashMap<Double, EnvProperty.Required>();
+
+static {
+for (EnvProperty.Required c: values()) {
+CONSTANTS.put(c.value, c);
+}
+}
+
+private Required(Double value) {
+this.value = value;
+}
+
+@JsonValue
+public Double value() {
+return this.value;
+}
+
+@JsonCreator
+public static EnvProperty.Required fromValue(Double value) {
+EnvProperty.Required constant = CONSTANTS.get(value);
+if (constant == null) {
+throw new IllegalArgumentException((value +""));
+} else {
+return constant;
+}
+}
+
+}
+
+}
+-----------------------------------com.example.Example.java-----------------------------------
+
+package com.example;
+
+import java.util.List;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+
+/**
+* Product
+* <p>
+* A product from the catalog
+* 
+*/
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+"name",
+"version",
+"referenceDeployment",
+"deploymentProperties",
+"envProperties"
+})
+public class Example {
+
+@JsonProperty("name")
+private String name;
+@JsonProperty("version")
+private String version;
+@JsonProperty("referenceDeployment")
+private ReferenceDeployment referenceDeployment;
+@JsonProperty("deploymentProperties")
+private List<DeploymentProperty> deploymentProperties = null;
+@JsonProperty("envProperties")
+private List<EnvProperty> envProperties = null;
+
+@JsonProperty("name")
+public String getName() {
+return name;
+}
+
+@JsonProperty("name")
+public void setName(String name) {
+this.name = name;
+}
+
+@JsonProperty("version")
+public String getVersion() {
+return version;
+}
+
+@JsonProperty("version")
+public void setVersion(String version) {
+this.version = version;
+}
+
+@JsonProperty("referenceDeployment")
+public ReferenceDeployment getReferenceDeployment() {
+return referenceDeployment;
+}
+
+@JsonProperty("referenceDeployment")
+public void setReferenceDeployment(ReferenceDeployment referenceDeployment) {
+this.referenceDeployment = referenceDeployment;
+}
+
+@JsonProperty("deploymentProperties")
+public List<DeploymentProperty> getDeploymentProperties() {
+return deploymentProperties;
+}
+
+@JsonProperty("deploymentProperties")
+public void setDeploymentProperties(List<DeploymentProperty> deploymentProperties) {
+this.deploymentProperties = deploymentProperties;
+}
+
+@JsonProperty("envProperties")
+public List<EnvProperty> getEnvProperties() {
+return envProperties;
+}
+
+@JsonProperty("envProperties")
+public void setEnvProperties(List<EnvProperty> envProperties) {
+this.envProperties = envProperties;
+}
+
+}
+-----------------------------------com.example.ReferenceDeployment.java-----------------------------------
+
+package com.example;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({
+
+})
+public class ReferenceDeployment {
+
+
+}

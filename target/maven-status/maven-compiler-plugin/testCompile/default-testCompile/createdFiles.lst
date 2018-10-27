@@ -1,0 +1,9 @@
+com\vik\test\json_validator\jsonjava\ObjectToFromJSONIntegrationTest.class
+com\vik\test\json_validator\jsonjava\JSONObjectIntegrationTest.class
+com\vik\test\json_validator\jsonjava\CookieIntegrationTest.class
+com\vik\test\json_validator\jsonjava\CDLIntegrationTest.class
+com\vik\test\json_validator\jsonjava\JSONArrayIntegrationTest.class
+com\vik\test\json_validator\jsonjava\JSONTokenerIntegrationTest.class
+com\vik\json_validator\json\schema\JSONSchemaUnitTest.class
+com\vik\test\json_validator\jsonpointer\JsonPointerCrudUnitTest.class
+com\vik\test\json_validator\jsonjava\HTTPIntegrationTest.class

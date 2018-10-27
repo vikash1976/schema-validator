@@ -1,0 +1,7 @@
+{
+	"rectangle" : {
+		"id" : true,
+		"name" : "abc",
+		"price": -123
+	}
+}

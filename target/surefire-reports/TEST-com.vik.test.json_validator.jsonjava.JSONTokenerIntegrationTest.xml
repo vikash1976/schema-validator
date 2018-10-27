@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="1" failures="0" name="com.vik.test.json_validator.jsonjava.JSONTokenerIntegrationTest" time="0" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\bin"/>
+    <property name="java.vm.version" value="25.152-b16"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Eee\workspace-sboot\schema-validator"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="Service Pack 1"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\Eee\workspace-sboot\schema-validator"/>
+    <property name="java.runtime.version" value="1.8.0_152-b16"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\VIKASH~1.PAN\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 7"/>
+    <property name="classworlds.conf" value="C:\Eee\workspace-sboot\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1362790919604177881.tmp"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_152/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_152/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_152/bin/../jre/lib/amd64;C:\Eee\Python35\Scripts\;C:\Eee\Python35\;C:\Windows\system32\WindowsPowerShell\v1.0\;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\nodejs\;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\Java\jre7\bin;%M2_HOME%\bin;C:\Eee\openssl-0.9.8k_WIN32\bin;C:\Eee\apache-ant-1.9.4\b;C:\Eee\adt-bundle-windows-x86_64-20140702\sdk\platforms\android-19;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\vikash.pa;C;C:\Users\vikash.pandey\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Eee\GoWorkspace\src\github.com\brendangregg\FlameGraph;C:\Eee\Gradle\gradle-4.3.1\bin;C:\Program Files\Docker Toolbox;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Eee\sonar-scanner-3.2.0.1227-windows\bin;C:\Eee\Python35\Scripts\;C:\Eee\Python35\;C:\Windows\system32\WindowsPowerShell\v1.0\;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft Application Virtualization Client;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\nodejs\;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\Java\jre7\bin;C:\Dee\MyData\apache-maven-3.5.4\\bin;C:\Eee\openssl-0.9.8k_WIN32\bin;C:\Eee\apache-ant-1.9.4\b;C:\Eee\adt-bundle-windows-x86_64-20140702\sdk\platforms\android-19;C:\Program Files\Git\bin;C:\Program Files\Git\cmd;C:\Users\vikash.pa;C;C:\Users\vikash.pandey\AppData\Roaming\npm;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Eee\GoWorkspace\src\github.com\brendangregg\FlameGraph;C:\Eee\Gradle\gradle-4.3.1\bin;C:\Program Files\Docker Toolbox;C:\Program Files\Java\jdk1.8.0_152\bin;C:\Eee\sonar-scanner-3.2.0.1227-windows\bin;C:\Eee\eclipse-ipp9-jee-mars-R-win32-x86_64_93RC6\eclipse-jee-mars-R-win32-x86_64;;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.1"/>
+    <property name="user.home" value="C:\Users\vikash.pandey"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="user.name" value="E1077326"/>
+    <property name="java.class.path" value="/C:/Eee/eclipse-ipp9-jee-mars-R-win32-x86_64_93RC6/eclipse-jee-mars-R-win32-x86_64/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_152\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_152"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\Eee\workspace-sboot\schema-validator\EMBEDDED"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.vik.test.json_validator.jsonjava.JSONTokenerIntegrationTest" name="givenString_convertItToJSONTokens" time="0"/>
+</testsuite>
